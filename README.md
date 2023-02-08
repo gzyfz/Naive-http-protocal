@@ -52,12 +52,12 @@ When to update the timeout?
 What is the timeout value?
 - 5 seconds.
 
-##some features
+## some features
 
-The client can issuemore than one TritonHTTP request without necessarily waiting for full HTTP replies to be returned (HTTP pipelining).
+- The client can issuemore than one TritonHTTP request without necessarily waiting for full HTTP replies to be returned (HTTP pipelining).
  <img width="530" alt="iShot_2023-02-07_19 34 57" src="https://user-images.githubusercontent.com/114261503/217423619-ff491f20-9efb-4d87-a6eb-aee82df246f8.png">
 
-In some cases, it is desirable to host multiple web servers on a single physical machine. This allows all the hosted web servers to share the physical server’s resources such as memory and processing, and in particular, to share a single IP address. This project implements virtual hosting by allowing TritonHTTP to host multiple servers. Each of these servers has a unique host name and maps to a unique docroot directory on the physical server. Every request sent to TritonHTTP includes the “Host” header, which is used to determine the web server that each request is destined for. 
+- In some cases, it is desirable to host multiple web servers on a single physical machine. This allows all the hosted web servers to share the physical server’s resources such as memory and processing, and in particular, to share a single IP address. This project implements virtual hosting by allowing TritonHTTP to host multiple servers. Each of these servers has a unique host name and maps to a unique docroot directory on the physical server. Every request sent to TritonHTTP includes the “Host” header, which is used to determine the web server that each request is destined for. 
 
 ## Usage
 
