@@ -10,23 +10,22 @@ Here provide a concise summary of the TritonHTTP spec.
 TritonHTTP follows the [general HTTP message format](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages). And it has some further specifications:
 
 - HTTP version supported: `HTTP/1.1`
-- Request method supported: `GET`
+- Request method supported: `GET`,`POST`(working on it)
 - Response status supported:
   - `200 OK`
   - `400 Bad Request`
   - `404 Not Found`
 - Request headers:
-  - `Host` (required)
+  - `Host` 
   - `Connection` (optional, `Connection: close` has special meaning influencing server logic)
   - Other headers are allowed, but won't have any effect on the server logic
 - Response headers:
-  - `Date` (required)
-  - `Last-Modified` (required for a `200` response)
-  - `Content-Type` (required for a `200` response)
-  - `Content-Length` (required for a `200` response)
-  - `Connection: close` (required in response for a `Connection: close` request, or for a `400` response)
-  - Response headers should be written in sorted order for the ease of testing
-  - Response headers should be returned in 'canonical form', meaning that the first letter and any letter following a hyphen should be upper-case. All other letters in the header string should be lower-case.
+  - `Date` 
+  - `Last-Modified` (for a `200` response)
+  - `Content-Type` (for a `200` response)
+  - `Content-Length` (for a `200` response)
+  - `Connection: close` (in response for a `Connection: close` request, or for a `400` response)
+  - Response headers will be returned in 'canonical form', meaning that the first letter and any letter following a hyphen should be upper-case. All other letters in the header string should be lower-case.
 
 ### Server Logic
 
